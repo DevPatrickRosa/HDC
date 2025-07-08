@@ -56,7 +56,7 @@ nav {
 }
 
 .navbarItems a:hover {
-    color: #4259f1
+    color: #4259f1;
 }
 
 .defulBtn {
@@ -66,7 +66,7 @@ nav {
     transition: all 0.5s;
 }
 
-.defulBtn:hover {
+.navbarItems .defulBtn:hover {
     background-color: #8b0000;
     color: #fff;
 
@@ -100,21 +100,23 @@ nav {
 
 }
 
-.servicesCOntainer {
-    padding: 80px;
+/*Serviços*/
+
+.servicesContainer {
+    padding: 80px 0;
 }
 
-.servicesCOntainer h2 {
+.servicesContainer h2 {
     text-align: center;
 }
 
-.servicesCOntainer ul {
+.servicesContainer ul {
     display: flex;
-    width: 90px;
+    width: 90%;
     margin: 0 auto;
 }
 
-.servicesCOntainer li {
+.servicesContainer li {
     flex: 1 1 200px;
     list-style: none;
     text-align: center;
@@ -139,12 +141,12 @@ nav {
     color: #ef8f29;
 }
 
-.servicesCOntainer h3 {
+.servicesContainer h3 {
     margin-bottom: 25px;
 
 }
 
-.servicesCOntainer p {
+.servicesContainer p {
     line-height: 25px;
 }
 
@@ -163,7 +165,7 @@ nav {
     font-size: 20px;
 }
 
-.plansContainer {
+.plansContainer{
     display: flex;
     justify-content: space-between;
     width: 90%;
@@ -182,6 +184,7 @@ nav {
 
 .plan li {
     list-style: none;
+    line-height: 50px;
     height: 50px;
     background-color: #e8e9ea;
     color: #333;
@@ -270,23 +273,23 @@ nav {
 
 /* Formulario de Contato*/
 
-#contactCOntainer {
+#contactContainer {
     text-align: center;
     padding: 80px 0 32px 0;
 }
 
-#contactCOntainer h2 {
+#contactContainer h2 {
     font-size: 36px;
     margin-bottom: 15px;
 }
 
-#contactCOntainer p {
+#contactContainer p {
     font-size: 20px;
     margin-bottom: 40px;
 }
 
-#contactCOntainer input,
-#contactCOntainer textarea {
+#contactContainer input,
+#contactContainer textarea {
     width: 200px;
     padding: 10px 20px;
     border-radius: 5px;
@@ -294,14 +297,14 @@ nav {
     margin: 0 10px 20px;
 }
 
-#contactCOntainer textarea {
+#contactContainer textarea {
     display: block;
     margin: 0 auto 20px;
     width: 470px;
     height: 150px;
 }
 
-#contactCOntainer input[type="submit"] {
+#contactContainer input[type="submit"] {
     display: block;
     margin: 0 auto;
     background-color: #2cc76a;
@@ -315,4 +318,80 @@ footer {
     text-align: center;
     font-weight: bold;
     margin: 50px 0 80px;
+}
+
+/* Responsividade*/
+
+/*Pequenos Laptopts */
+@media screen and (max-width:1100px){
+    .plansContainer{
+        width: 95%;
+    }
+
+    plan{
+        margin: 0 5px;
+    }
+}
+
+/*Tablet atá 900px*/
+@media screen and (max-width:900px){
+    .mainBanner p{
+        padding: 0 96px;
+        
+    }
+
+    .searchdomainContainer{
+        padding: 32px 64px;
+    }
+}
+
+/*Celular 576px*/
+@media screen and (max-width:576px){
+    html,
+    body{
+        overflow-x: hidden;
+    }
+
+    .navbarContainer{
+        font-size: 12px;
+        margin-left: 10px;
+    }
+    .mainBanner p{
+        padding: 0 32px;
+    }
+
+    .searchdomainContainer ul{
+        flex-direction: column;
+    }
+
+    .plansContainer{
+        flex-direction: column;
+        width: 100%;
+        padding: 0 32px;
+    }
+
+    .plan{
+        width: 100%;
+        max-width:100% ;
+        margin-bottom: 15px;
+    }
+
+    .searchdomainContainer h2{
+        font-size: 32px;
+    }
+
+    .searchdomainContainer input[type="text"]{
+        width: 100%;
+    }
+
+    #contactContainer{
+        padding: 48px 32px;
+    }
+
+    #contactContainer input,
+    #contactContainer textarea{
+        width: 100%;
+        margin:10px 0;
+    }
+
 }
